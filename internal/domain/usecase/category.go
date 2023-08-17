@@ -50,6 +50,7 @@ func (c *CategoriesUseCase) FindCategoryOne(idCategory int64) (interface{}, int)
 	}
 	return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", category), http.StatusOK
 }
+
 func (c *CategoriesUseCase) DeleteCategory(ctx context.Context, idCategory int64) (interface{}, int) {
 	category, err := c.repoCategories.FindCategoryOne(idCategory)
 	if err != nil || category == nil || category.ID == 0 {

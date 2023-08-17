@@ -40,6 +40,6 @@ func (r *repositoryObjectives) FindObjectiveByLevel(idLevels int64) (*[]entity.O
 
 func (r *repositoryObjectives) FindObjectiveOne(idObjective int64) (*entity.Objectives, error) {
 	var objective entity.Objectives
-	err := r.db.First(objective, idObjective).Error
+	err := r.db.First(&objective, idObjective).Error
 	return &objective, err
 }

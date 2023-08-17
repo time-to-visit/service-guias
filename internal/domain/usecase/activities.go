@@ -69,6 +69,6 @@ func (r *ActivitiesUseCase) DeleteActivities(ctx context.Context, idActivities i
 	if err != nil {
 		return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la actividad", nil), http.StatusBadRequest
 	}
-	return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "actividad eliminado sastifactoriamente", nil), http.StatusBadRequest
+	return objectValues.NewResponseWithData(http.StatusOK, "ok", "actividad eliminado sastifactoriamente", nil), http.StatusOK
 
 }

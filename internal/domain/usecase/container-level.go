@@ -75,5 +75,5 @@ func (c *ContainerLevelsUseCase) DeleteContainerLevels(ctx context.Context, idCo
 	if err != nil {
 		return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contenido del nivel", nil), http.StatusBadRequest
 	}
-	return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "contenido del nivel eliminado sastifactoriamente", nil), http.StatusBadRequest
+	return objectValues.NewResponseWithData(http.StatusOK, "ok", "contenido del nivel eliminado sastifactoriamente", nil), http.StatusOK
 }

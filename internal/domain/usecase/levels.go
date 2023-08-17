@@ -68,5 +68,5 @@ func (c *LevelsUseCase) DeleteLevels(ctx context.Context, idLevels int64) (inter
 	if err != nil {
 		return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contenido del nivel", nil), http.StatusBadRequest
 	}
-	return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "nivel eliminado sastifactoriamente", nil), http.StatusBadRequest
+	return objectValues.NewResponseWithData(http.StatusOK, "error", "nivel eliminado sastifactoriamente", nil), http.StatusOK
 }

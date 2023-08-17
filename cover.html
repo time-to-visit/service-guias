@@ -1,0 +1,2535 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>entry: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">service-user/cmd/entry/activities.go (4.5%)</option>
+				
+				<option value="file1">service-user/cmd/entry/category.go (4.5%)</option>
+				
+				<option value="file2">service-user/cmd/entry/container-fluid.go (4.5%)</option>
+				
+				<option value="file3">service-user/cmd/entry/guides.go (5.3%)</option>
+				
+				<option value="file4">service-user/cmd/entry/levels.go (4.5%)</option>
+				
+				<option value="file5">service-user/cmd/entry/objectives.go (4.5%)</option>
+				
+				<option value="file6">service-user/cmd/entry/question.go (0.0%)</option>
+				
+				<option value="file7">service-user/cmd/entry/section.go (5.3%)</option>
+				
+				<option value="file8">service-user/cmd/handler/activities.go (100.0%)</option>
+				
+				<option value="file9">service-user/cmd/handler/category.go (100.0%)</option>
+				
+				<option value="file10">service-user/cmd/handler/container-fluid.go (100.0%)</option>
+				
+				<option value="file11">service-user/cmd/handler/guides.go (100.0%)</option>
+				
+				<option value="file12">service-user/cmd/handler/levels.go (100.0%)</option>
+				
+				<option value="file13">service-user/cmd/handler/objectives.go (100.0%)</option>
+				
+				<option value="file14">service-user/cmd/handler/question.go (0.0%)</option>
+				
+				<option value="file15">service-user/cmd/handler/section.go (100.0%)</option>
+				
+				<option value="file16">service-user/internal/domain/entity/activities.go (60.0%)</option>
+				
+				<option value="file17">service-user/internal/domain/entity/category.go (66.7%)</option>
+				
+				<option value="file18">service-user/internal/domain/entity/container-level.go (60.0%)</option>
+				
+				<option value="file19">service-user/internal/domain/entity/guides.go (66.7%)</option>
+				
+				<option value="file20">service-user/internal/domain/entity/levels.go (66.7%)</option>
+				
+				<option value="file21">service-user/internal/domain/entity/objectives.go (66.7%)</option>
+				
+				<option value="file22">service-user/internal/domain/entity/question.go (60.0%)</option>
+				
+				<option value="file23">service-user/internal/domain/entity/section.go (66.7%)</option>
+				
+				<option value="file24">service-user/internal/domain/object_values/response.go (0.0%)</option>
+				
+				<option value="file25">service-user/internal/domain/repository/activities.go (30.0%)</option>
+				
+				<option value="file26">service-user/internal/domain/repository/category.go (30.0%)</option>
+				
+				<option value="file27">service-user/internal/domain/repository/container-level.go (30.0%)</option>
+				
+				<option value="file28">service-user/internal/domain/repository/guides.go (21.4%)</option>
+				
+				<option value="file29">service-user/internal/domain/repository/levels.go (30.0%)</option>
+				
+				<option value="file30">service-user/internal/domain/repository/objectives.go (30.0%)</option>
+				
+				<option value="file31">service-user/internal/domain/repository/question.go (42.9%)</option>
+				
+				<option value="file32">service-user/internal/domain/repository/section.go (27.3%)</option>
+				
+				<option value="file33">service-user/internal/domain/usecase/activities.go (0.0%)</option>
+				
+				<option value="file34">service-user/internal/domain/usecase/category.go (0.0%)</option>
+				
+				<option value="file35">service-user/internal/domain/usecase/container-level.go (0.0%)</option>
+				
+				<option value="file36">service-user/internal/domain/usecase/guides.go (0.0%)</option>
+				
+				<option value="file37">service-user/internal/domain/usecase/levels.go (0.0%)</option>
+				
+				<option value="file38">service-user/internal/domain/usecase/objectives.go (0.0%)</option>
+				
+				<option value="file39">service-user/internal/domain/usecase/question.go (0.0%)</option>
+				
+				<option value="file40">service-user/internal/domain/usecase/section.go (0.0%)</option>
+				
+				<option value="file41">service-user/internal/domain/utils/sql.go (0.0%)</option>
+				
+				<option value="file42">service-user/internal/domain/utils/url.go (0.0%)</option>
+				
+				<option value="file43">service-user/internal/domain/validator/activities.go (77.8%)</option>
+				
+				<option value="file44">service-user/internal/domain/validator/category.go (77.8%)</option>
+				
+				<option value="file45">service-user/internal/domain/validator/container-level.go (77.8%)</option>
+				
+				<option value="file46">service-user/internal/domain/validator/guides.go (77.8%)</option>
+				
+				<option value="file47">service-user/internal/domain/validator/levels.go (77.8%)</option>
+				
+				<option value="file48">service-user/internal/domain/validator/objectives.go (77.8%)</option>
+				
+				<option value="file49">service-user/internal/domain/validator/question.go (77.8%)</option>
+				
+				<option value="file50">service-user/internal/domain/validator/sections.go (77.8%)</option>
+				
+				<option value="file51">service-user/internal/infra/storage/storage.go (0.0%)</option>
+				
+				<option value="file52">service-user/internal/infra/validation/client.go (86.7%)</option>
+				
+				<option value="file53">service-user/internal/utils/decode_file.go (0.0%)</option>
+				
+				<option value="file54">service-user/internal/utils/random_name.go (0.0%)</option>
+				
+				<option value="file55">service-user/internal/utils/url_utils.go (0.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">no coverage</span>
+				<span class="cov1">low coverage</span>
+				<span class="cov2">*</span>
+				<span class="cov3">*</span>
+				<span class="cov4">*</span>
+				<span class="cov5">*</span>
+				<span class="cov6">*</span>
+				<span class="cov7">*</span>
+				<span class="cov8">*</span>
+				<span class="cov9">*</span>
+				<span class="cov10">high coverage</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type activitiesEntry struct {
+        activitiesCaseuse usecase.ActivitiesUseCase
+}
+
+func NewActivitiesEntry(activitiesCaseuse usecase.ActivitiesUseCase) *activitiesEntry <span class="cov8" title="1">{
+        return &amp;activitiesEntry{
+                activitiesCaseuse,
+        }
+}</span>
+
+func (c *activitiesEntry) RegisterActivities(context echo.Context) error <span class="cov0" title="0">{
+        activities := context.Get("activities").(*entity.Activities)
+        response, status := c.activitiesCaseuse.RegisterActivities(context.Request().Context(), activities)
+        return context.JSON(status, response)
+}</span>
+
+func (c *activitiesEntry) FindActivities(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idCategory, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.activitiesCaseuse.FindActivities(int64(idCategory))
+        return context.JSON(status, response)</span>
+}
+
+func (c *activitiesEntry) FindActivitiesOne(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idCategory, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.activitiesCaseuse.FindActivitiesOne(int64(idCategory))
+        return context.JSON(status, response)</span>
+
+}
+
+func (c *activitiesEntry) DeleteActivities(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idActivities, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.activitiesCaseuse.DeleteActivities(context.Request().Context(), int64(idActivities))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type categoryEntry struct {
+        categoryCaseuse usecase.CategoriesUseCase
+}
+
+func NewCategoryEntry(categoryCaseuse usecase.CategoriesUseCase) *categoryEntry <span class="cov8" title="1">{
+        return &amp;categoryEntry{
+                categoryCaseuse,
+        }
+}</span>
+
+func (r *categoryEntry) RegisterCategory(context echo.Context) error <span class="cov0" title="0">{
+        categories := context.Get("categories").(*entity.Categories)
+        response, status := r.categoryCaseuse.RegisterCategory(context.Request().Context(), categories)
+        return context.JSON(status, response)
+}</span>
+
+func (r *categoryEntry) FindCategory(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idSection, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := r.categoryCaseuse.FindCategory(int64(idSection))
+        return context.JSON(status, response)</span>
+}
+
+func (r *categoryEntry) FindCategoryOne(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idCategory, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := r.categoryCaseuse.FindCategoryOne(int64(idCategory))
+        return context.JSON(status, response)</span>
+}
+
+func (r *categoryEntry) DeleteCategory(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idCategory, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := r.categoryCaseuse.DeleteCategory(context.Request().Context(), int64(idCategory))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type containerLevelEntry struct {
+        containerLevelCaseuse usecase.ContainerLevelsUseCase
+}
+
+func NewContainerLevelEntry(containerLevelCaseuse usecase.ContainerLevelsUseCase) *containerLevelEntry <span class="cov8" title="1">{
+        return &amp;containerLevelEntry{
+                containerLevelCaseuse,
+        }
+}</span>
+
+func (c *containerLevelEntry) InsertContainerLevels(context echo.Context) error <span class="cov0" title="0">{
+        containerLevels := context.Get("containerLevels").(*entity.ContainerLevels)
+        response, status := c.containerLevelCaseuse.InsertContainerLevels(context.Request().Context(), containerLevels)
+        return context.JSON(status, response)
+}</span>
+func (c *containerLevelEntry) FindContainerLevels(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idLevel, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.containerLevelCaseuse.FindContainerLevels(int64(idLevel))
+        return context.JSON(status, response)</span>
+}
+func (c *containerLevelEntry) FindContainerLevelsOne(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idContainerLevel, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.containerLevelCaseuse.FindContainerLevelsOne(int64(idContainerLevel))
+        return context.JSON(status, response)</span>
+}
+func (c *containerLevelEntry) DeleteContainerLevels(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idContainerLevel, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.containerLevelCaseuse.DeleteContainerLevels(context.Request().Context(), int64(idContainerLevel))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/utils"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type guideEntry struct {
+        guideCaseuse usecase.GuidesUseCase
+}
+
+func NewGuideEntry(guideCaseuse usecase.GuidesUseCase) *guideEntry <span class="cov8" title="1">{
+        return &amp;guideEntry{
+                guideCaseuse,
+        }
+}</span>
+
+func (c *guideEntry) RegisterGuides(context echo.Context) error <span class="cov0" title="0">{
+        guides := context.Get("guides").(*entity.Guides)
+        response, status := c.guideCaseuse.RegisterGuides(context.Request().Context(), guides)
+        return context.JSON(status, response)
+}</span>
+
+func (c *guideEntry) FindGuides(context echo.Context) error <span class="cov0" title="0">{
+        filter := utils.UrlValuesToMap(context.QueryParams())
+        response, status := c.guideCaseuse.FindGuides(filter)
+        return context.JSON(status, response)
+}</span>
+
+func (c *guideEntry) FindGuidesOne(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idGuides, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.guideCaseuse.FindGuidesOne(int64(idGuides))
+        return context.JSON(status, response)</span>
+}
+
+func (c *guideEntry) DeleteGuides(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idGuides, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.guideCaseuse.DeleteGuides(context.Request().Context(), int64(idGuides))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type levelEntry struct {
+        levelCaseuse usecase.LevelsUseCase
+}
+
+func NewLevelEntry(levelCaseuse usecase.LevelsUseCase) *levelEntry <span class="cov8" title="1">{
+        return &amp;levelEntry{
+                levelCaseuse,
+        }
+}</span>
+
+func (c *levelEntry) RegisterLevels(context echo.Context) error <span class="cov0" title="0">{
+        levels := context.Get("levels").(*entity.Levels)
+        response, status := c.levelCaseuse.InsertLevels(context.Request().Context(), *levels)
+        return context.JSON(status, response)
+}</span>
+
+func (c *levelEntry) FindLevelsByCategory(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idCategory, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.levelCaseuse.FindLevelsByCategory(int64(idCategory))
+        return context.JSON(status, response)</span>
+}
+
+func (c *levelEntry) FindLevelsOne(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idLevel, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.levelCaseuse.FindLevelsOne(int64(idLevel))
+        return context.JSON(status, response)</span>
+}
+
+func (c *levelEntry) DeleteLevels(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idLevel, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.levelCaseuse.DeleteLevels(context.Request().Context(), int64(idLevel))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type objectiveEntry struct {
+        objectiveCaseuse usecase.ObjectivesUseCase
+}
+
+func NewOjectiveEntry(objectiveCaseuse usecase.ObjectivesUseCase) *objectiveEntry <span class="cov8" title="1">{
+        return &amp;objectiveEntry{
+                objectiveCaseuse,
+        }
+}</span>
+
+func (c *objectiveEntry) RegisterObjective(context echo.Context) error <span class="cov0" title="0">{
+        objectives := context.Get("objectives").(*entity.Objectives)
+        response, status := c.objectiveCaseuse.RegisterObjective(objectives)
+        return context.JSON(status, response)
+}</span>
+
+func (c *objectiveEntry) DeleteObjective(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idObjetives, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.objectiveCaseuse.DeleteObjective(int64(idObjetives))
+        return context.JSON(status, response)</span>
+}
+
+func (c *objectiveEntry) FindObjectiveByLevels(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idLevels, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.objectiveCaseuse.FindObjectiveByLevels(int64(idLevels))
+        return context.JSON(status, response)</span>
+}
+
+func (c *objectiveEntry) FindObjectiveOne(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idObjetives, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.objectiveCaseuse.FindObjectiveOne(int64(idObjetives))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type questionEntry struct {
+        questionCaseuse usecase.QuestionUseCase
+}
+
+func NewQuestionEntry(questionCaseuse usecase.QuestionUseCase) *questionEntry <span class="cov0" title="0">{
+        return &amp;questionEntry{
+                questionCaseuse,
+        }
+}</span>
+
+func (c *questionEntry) InsertQuestion(context echo.Context) error <span class="cov0" title="0">{
+        question := context.Get("question").(*entity.Question)
+        response, status := c.questionCaseuse.InsertQuestion(context.Request().Context(), *question)
+        return context.JSON(status, response)
+}</span>
+
+func (c *questionEntry) DeleteQuestion(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idQuestion, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.questionCaseuse.DeleteQuestion(context.Request().Context(), int64(idQuestion))
+        return context.JSON(status, response)</span>
+}
+
+func (c *questionEntry) FindQuestionByObjective(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idObective, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.questionCaseuse.FindQuestionByObjective(int64(idObective))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type sectionEntry struct {
+        sectionCaseuse usecase.SectionUseCase
+}
+
+func NewSectionEntry(sectionCaseuse usecase.SectionUseCase) *sectionEntry <span class="cov8" title="1">{
+        return &amp;sectionEntry{
+                sectionCaseuse,
+        }
+}</span>
+
+func (c *sectionEntry) InsertSection(context echo.Context) error <span class="cov0" title="0">{
+        section := context.Get("section").(*entity.Section)
+        response, status := c.sectionCaseuse.InsertSection(context.Request().Context(), section)
+        return context.JSON(status, response)
+}</span>
+
+func (c *sectionEntry) FindSection(context echo.Context) error <span class="cov0" title="0">{
+        filter := make(map[string]interface{})
+        response, status := c.sectionCaseuse.FindSection(filter)
+        return context.JSON(status, response)
+}</span>
+
+func (c *sectionEntry) FindSectionOne(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idSection, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.sectionCaseuse.FindSectionOne(int64(idSection))
+        return context.JSON(status, response)</span>
+}
+
+func (c *sectionEntry) DeleteSection(context echo.Context) error <span class="cov0" title="0">{
+        id := context.Param("ID")
+        idSection, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return context.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := c.sectionCaseuse.DeleteSection(context.Request().Context(), int64(idSection))
+        return context.JSON(status, response)</span>
+}
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerActivities(e *echo.Echo, activitiesUseCase usecase.ActivitiesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        activitiesEntry := entry.NewActivitiesEntry(activitiesUseCase)
+        e.DELETE("/activities/:ID", activitiesEntry.DeleteActivities, auth)
+        e.POST("/activities", activitiesEntry.RegisterActivities, auth, validator.ValidateActivities)
+        e.GET("/activities/:ID", activitiesEntry.FindActivities, auth)
+        e.GET("/activities/one/:ID", activitiesEntry.FindActivitiesOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerCategories(e *echo.Echo, categoriesUseCase usecase.CategoriesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        categoriesEntry := entry.NewCategoryEntry(categoriesUseCase)
+        e.POST("/categories", categoriesEntry.RegisterCategory, auth, validator.ValidateCategories)
+        e.DELETE("/categories/:ID", categoriesEntry.DeleteCategory, auth)
+        e.GET("/categories/section/:ID", categoriesEntry.FindCategory, auth)
+        e.GET("/categories/:ID", categoriesEntry.FindCategoryOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerContainerLevel(e *echo.Echo, containerLevelUseCase usecase.ContainerLevelsUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        containerLevelEntry := entry.NewContainerLevelEntry(containerLevelUseCase)
+        e.POST("/container-level", containerLevelEntry.InsertContainerLevels, auth, validator.ValidateContainerLevels)
+        e.DELETE("/container-level/:ID", containerLevelEntry.DeleteContainerLevels, auth)
+        e.GET("/container-level/:ID", containerLevelEntry.FindContainerLevelsOne, auth)
+        e.GET("/container-level/level/:ID", containerLevelEntry.FindContainerLevels, auth)
+
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerGuide(e *echo.Echo, guideUseCase usecase.GuidesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        guideEntry := entry.NewGuideEntry(guideUseCase)
+        e.DELETE("/guides/:ID", guideEntry.DeleteGuides, auth)
+        e.POST("/guides", guideEntry.RegisterGuides, auth, validator.ValidateGuides)
+        e.GET("/guides", guideEntry.FindGuides, auth)
+        e.GET("/guides/:ID", guideEntry.FindGuidesOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerLevel(e *echo.Echo, levelUseCase usecase.LevelsUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        levelEntry := entry.NewLevelEntry(levelUseCase)
+        e.POST("/level", levelEntry.RegisterLevels, auth, validator.ValidateLevels)
+        e.DELETE("/level/:ID", levelEntry.DeleteLevels, auth)
+        e.GET("/level/category/:ID", levelEntry.FindLevelsByCategory, auth)
+        e.GET("/level/:ID", levelEntry.FindLevelsOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerObjetive(e *echo.Echo, objectiveUseCase usecase.ObjectivesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        objectiveEntry := entry.NewOjectiveEntry(objectiveUseCase)
+        e.POST("/objectives", objectiveEntry.RegisterObjective, auth, validator.ValidateObjectives)
+        e.DELETE("/objectives/:ID", objectiveEntry.DeleteObjective, auth)
+        e.GET("/objectives/level/:ID", objectiveEntry.FindObjectiveByLevels, auth)
+        e.GET("/objectives/:ID", objectiveEntry.FindObjectiveOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerQuestion(e *echo.Echo, questionUseCase usecase.QuestionUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov0" title="0">{
+        questionEntry := entry.NewQuestionEntry(questionUseCase)
+        e.GET("/question/objective/:ID", questionEntry.FindQuestionByObjective, auth)
+        e.POST("/question", questionEntry.InsertQuestion, auth, validator.ValidateQuestion)
+        e.DELETE("/question/:ID", questionEntry.DeleteQuestion, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package handler
+
+import (
+        "service-user/cmd/entry"
+        "service-user/internal/domain/usecase"
+        "service-user/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerSection(e *echo.Echo, sectionUseCase usecase.SectionUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        sectionEntry := entry.NewSectionEntry(sectionUseCase)
+        e.POST("/section", sectionEntry.InsertSection, auth, validator.ValidateSections)
+        e.DELETE("/section/:ID", sectionEntry.DeleteSection, auth)
+        e.GET("/section", sectionEntry.FindSection, auth)
+        e.GET("/section/:ID", sectionEntry.FindSectionOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Activities struct {
+        Model
+        Image            string `gorm:"column:image;type:varchar(255);not null" json:"image" validate:"required"`
+        Video            string `gorm:"column:video;type:varchar(255);not null" json:"video" validate:"required"`
+        Description      string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+        SitesId          int64  `gorm:"column:department_id;type:int(11);not null" json:"site_id"`
+        SitesName        string `gorm:"column:sites_name;type:varchar(255);not null" json:"sites_name" validate:"required"`
+        MunicipalitiesID int64  `gorm:"column:department_id;type:int(11);not null" json:"municipalities_id"`
+        DepartmentID     int64  `gorm:"column:department_id;type:int(11);not null" json:"department_id"`
+        State            string `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+}
+
+func (m Activities) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Activities) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Categories struct {
+        Model
+        Name      string                 `gorm:"column:name;type:varchar(255);not null" json:"name" validate:"required"`
+        Cover     string                 `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        State     string                 `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        SectionID int64                  `gorm:"column:section_id;type:int(11);not null" json:"section_id" validate:"required"`
+        Section   *SectionWihoutValidate `gorm:"joinForeignKey:section_id;foreignKey:id;references:SectionID" json:"section,omitempty"`
+}
+
+type CategoriesWihoutValidate struct {
+        Model
+        Name      string                 `gorm:"column:name;type:varchar(255);not null" json:"name" validate:"required"`
+        Cover     string                 `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        State     string                 `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        SectionID int64                  `gorm:"column:section_id;type:int(11);not null" json:"section_id" validate:"required"`
+        Section   *SectionWihoutValidate `gorm:"joinForeignKey:section_id;foreignKey:id;references:SectionID" json:"section,omitempty"`
+}
+
+func (m CategoriesWihoutValidate) TableName() string <span class="cov10" title="4">{
+        return "categories"
+}</span>
+
+func (m Categories) BeforeCreate(tx *gorm.DB) (err error) <span class="cov5" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Categories) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type ContainerLevels struct {
+        Model
+        Type      string                 `gorm:"column:type;type:varchar(255);not null" json:"type" validate:"required"`
+        Container string                 `gorm:"column:container;type:varchar(255);not null" json:"container" validate:"required"`
+        LevelsID  int64                  `gorm:"column:level_id;type:int(11);not null" json:"level_id" validate:"required"`
+        Levels    *LevelsWithoutValidate `gorm:"joinForeignKey:level_id;foreignKey:id;references:LevelsID" json:"levels,omitempty"`
+        State     string                 `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+}
+
+func (m ContainerLevels) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m ContainerLevels) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Guides struct {
+        Model
+        NameGuide          string                  `gorm:"column:name_guide;type:varchar(255);not null" json:"name_guide" validate:"required"`
+        SitesID            int64                   `gorm:"column:sites_id;type:int(11);not null" json:"sites_id" validate:"required"`
+        SitesName          string                  `gorm:"column:sites_name;type:varchar(255);not null" json:"sites_name" validate:"required"`
+        Cover              string                  `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        State              string                  `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        MunicipalitiesID   int64                   `gorm:"column:municipalities_id;type:int(11);not null" json:"municipalities_id" validate:"required"`
+        MunicipalitiesName string                  `gorm:"column:municipalities_name;type:varchar(255);not null" json:"municipalities_name" validate:"required"`
+        DepartmentID       int64                   `gorm:"column:department_id;type:int(11);not null" json:"department_id" validate:"required"`
+        DepartmentName     string                  `gorm:"column:deparment_name;type:varchar(255);not null" json:"department_name" validate:"required"`
+        Description        string                  `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+        Section            []SectionWihoutValidate `json:"section,omitempty"`
+}
+
+type GuidesWihoutValidate struct {
+        Model
+        NameGuide          string `gorm:"column:name_guide;type:varchar(255);not null" json:"name_guide" `
+        SitesID            int64  `gorm:"column:sites_id;type:int(11);not null" json:"sites_id"`
+        SitesName          string `gorm:"column:sites_name;type:varchar(255);not null" json:"sites_name"`
+        Cover              string `gorm:"column:cover;type:varchar(255);not null" json:"cover"`
+        State              string `gorm:"column:state;type:varchar(255);not null" json:"state"`
+        MunicipalitiesID   int64  `gorm:"column:municipalities_id;type:int(11);not null" json:"municipalities_id"`
+        MunicipalitiesName string `gorm:"column:municipalities_name;type:varchar(255);not null" json:"municipalities_name"`
+        DepartmentID       int64  `gorm:"column:department_id;type:int(11);not null" json:"department_id"`
+        DepartmentName     string `gorm:"column:deparment_name;type:varchar(255);not null" json:"department_name"`
+        Description        string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+}
+
+func (m *GuidesWihoutValidate) TableName() string <span class="cov1" title="1">{
+        return "guides"
+}</span>
+
+func (m Guides) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Guides) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Levels struct {
+        Model
+        Title       string                    `gorm:"column:title;type:varchar(255);not null" json:"title" validate:"required"`
+        State       string                    `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        Cover       string                    `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        CategoryID  int64                     `gorm:"column:category_id;type:int(11);not null" json:"category_id" validate:"required"`
+        Categories  *CategoriesWihoutValidate `gorm:"joinForeignKey:category_id;foreignKey:id;references:CategoryID" json:"category,omitempty"`
+        Description string                    `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+}
+
+type LevelsWithoutValidate struct {
+        Model
+        Title       string `gorm:"column:title;type:varchar(255);not null" json:"title"`
+        State       string `gorm:"column:state;type:varchar(255);not null" json:"state"`
+        CategoryID  int64  `gorm:"column:category_id;type:int(11);not null" json:"category_id"`
+        Description string `gorm:"column:description;type:varchar(255);not null" json:"description"`
+}
+
+func (m LevelsWithoutValidate) TableName() string <span class="cov10" title="2">{
+        return "levels"
+}</span>
+
+func (m Levels) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Levels) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Objectives struct {
+        Model
+        Question string                 `gorm:"column:question;type:varchar(255);not null" json:"question" validate:"required"`
+        State    string                 `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        Answer   string                 `gorm:"column:answer;type:varchar(255);not null" json:"answer" validate:"required"`
+        LevelsId int64                  `gorm:"column:levels_id;type:int(11);not null" json:"levels_id" validate:"required"`
+        Levels   *LevelsWithoutValidate `gorm:"joinForeignKey:levels_id;foreignKey:id;references:LevelsId" json:"levels,omitempty"`
+        Ques     *[]Question            `gorm:"foreignKey:ObjectiveID;references:ID"  json:"questions,omitempty"`
+}
+
+type ObjectivesWihoutValidate struct {
+        Model
+        Question string `gorm:"column:question;type:varchar(255);not null" json:"question" validate:"required"`
+        State    string `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        Answer   string `gorm:"column:answer;type:varchar(255);not null" json:"answer" validate:"required"`
+        LevelsId int64  `gorm:"column:levels_id;type:int(11);not null" json:"levels_id" validate:"required"`
+}
+
+func (m *ObjectivesWihoutValidate) TableName() string <span class="cov10" title="2">{
+        return "objectives"
+}</span>
+
+func (m Objectives) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Objectives) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Question struct {
+        Model
+        Type        string                    `gorm:"column:type;type:varchar(255);not null" json:"type" validate:"required"`
+        Request     string                    `gorm:"column:request;type:varchar(255);not null" json:"request" validate:"required"`
+        IsTrue      string                    `gorm:"column:is_true;type:varchar(255);not null" json:"is_true" validate:"required"`
+        ObjectiveID int64                     `gorm:"column:objective_id;type:int(11);not null" json:"objective_id" validate:"required"`
+        Objectives  *ObjectivesWihoutValidate `gorm:"joinForeignKey:objective_id;foreignKey:id;references:ObjectiveID" json:"objectives,omitempty"`
+        State       string                    `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+}
+
+func (m Question) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Question) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Section struct {
+        Model
+        Name       string                     `gorm:"column:name;type:varchar(255);not null" json:"name" validate:"required"`
+        Cover      string                     `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        State      string                     `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        GuideId    int64                      `gorm:"column:guides_id;type:int(11);not null" json:"guides_id" validate:"required"`
+        Guides     *GuidesWihoutValidate      `gorm:"joinForeignKey:guides_id;foreignKey:id;references:GuideId" json:"guides,omitempty"`
+        Categories []CategoriesWihoutValidate `gorm:"foreignKey:SectionID;references:ID"  json:"categories,omitempty"`
+}
+
+type SectionWihoutValidate struct {
+        Model
+        Name       string                     `gorm:"column:name;type:varchar(255);not null" json:"name" `
+        Cover      string                     `gorm:"column:cover;type:varchar(255);not null" json:"cover" `
+        State      string                     `gorm:"column:state;type:varchar(255);not null" json:"state"`
+        GuideId    int64                      `gorm:"column:guides_id;type:int(11);not null" json:"guides_id"`
+        Categories []CategoriesWihoutValidate `gorm:"foreignKey:SectionID;references:ID"  json:"categories,omitempty"`
+}
+
+func (m *SectionWihoutValidate) TableName() string <span class="cov10" title="4">{
+        return "sections"
+}</span>
+
+func (m Section) BeforeCreate(tx *gorm.DB) (err error) <span class="cov5" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Section) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">package objectValues
+
+type responseWithData struct {
+        StatusCode int         `json:"status_code"`
+        Title      string      `json:"title"`
+        Message    string      `json:"message"`
+        Data       interface{} `json:"data"`
+}
+
+func NewResponseWithData(StatusCode int, Title string, Message string, Data interface{}) responseWithData <span class="cov0" title="0">{
+        return responseWithData{
+                StatusCode,
+                Title,
+                Message,
+                Data,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryActivities interface {
+        RegisterActivities(activities entity.Activities) (*entity.Activities, error)
+        FindActivities(idSites int64) (*[]entity.Activities, error)
+        FindActivitiesOne(idActivities int64) (*entity.Activities, error)
+        DeleteActivities(idActivities int64) error
+}
+
+func NewRepositoryActivities(db *gorm.DB) IRepositoryActivities <span class="cov1" title="1">{
+        return &amp;repositoryActivities{
+                db,
+        }
+}</span>
+
+type repositoryActivities struct {
+        db *gorm.DB
+}
+
+func (r *repositoryActivities) RegisterActivities(activities entity.Activities) (*entity.Activities, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;activities).Error
+        return &amp;activities, err
+}</span>
+
+func (r *repositoryActivities) FindActivities(idSites int64) (*[]entity.Activities, error) <span class="cov0" title="0">{
+        var activitites []entity.Activities
+        err := r.db.Where("sites_id = ?", idSites).Find(&amp;activitites).Error
+        return &amp;activitites, err
+}</span>
+
+func (r *repositoryActivities) FindActivitiesOne(idActivities int64) (*entity.Activities, error) <span class="cov0" title="0">{
+        var activity entity.Activities
+        err := r.db.First(&amp;activity, idActivities).Error
+        return &amp;activity, err
+}</span>
+
+func (r *repositoryActivities) DeleteActivities(idActivities int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Activities{}, idActivities).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryCategories interface {
+        InsertCategory(categories entity.Categories) (*entity.Categories, error)
+        FindCategory(idSection int64) (*[]entity.Categories, error)
+        FindCategoryOne(idCategory int64) (*entity.Categories, error)
+        DeleteCategory(idCategory int64) error
+}
+
+func NewRepositoryCategories(db *gorm.DB) IRepositoryCategories <span class="cov1" title="1">{
+        return &amp;repositoryCategories{
+                db,
+        }
+}</span>
+
+type repositoryCategories struct {
+        db *gorm.DB
+}
+
+func (r *repositoryCategories) InsertCategory(categories entity.Categories) (*entity.Categories, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;categories).Error
+        return &amp;categories, err
+}</span>
+
+func (r *repositoryCategories) FindCategory(idSection int64) (*[]entity.Categories, error) <span class="cov0" title="0">{
+        var categories []entity.Categories
+        err := r.db.Where("section_id = ?", idSection).Find(&amp;categories).Error
+        return &amp;categories, err
+}</span>
+
+func (r *repositoryCategories) FindCategoryOne(idCategory int64) (*entity.Categories, error) <span class="cov0" title="0">{
+        var category entity.Categories
+        err := r.db.First(&amp;category, idCategory).Error
+        return &amp;category, err
+}</span>
+
+func (r *repositoryCategories) DeleteCategory(idCategory int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Categories{}, idCategory).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryContainerLevels interface {
+        InsertContainerLevels(containerLevels entity.ContainerLevels) (*entity.ContainerLevels, error)
+        FindContainerLevels(idLevels int64) (*[]entity.ContainerLevels, error)
+        FindContainerLevelsOne(idContainerLevels int64) (*entity.ContainerLevels, error)
+        DeleteContainerLevels(idContainerLevels int64) error
+}
+
+func NewRepositoryContainerLevels(db *gorm.DB) IRepositoryContainerLevels <span class="cov1" title="1">{
+        return &amp;repositoryContainerLevels{
+                db,
+        }
+}</span>
+
+type repositoryContainerLevels struct {
+        db *gorm.DB
+}
+
+func (r *repositoryContainerLevels) InsertContainerLevels(containerLevels entity.ContainerLevels) (*entity.ContainerLevels, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;containerLevels).Error
+        return &amp;containerLevels, err
+}</span>
+
+func (r *repositoryContainerLevels) FindContainerLevels(idLevels int64) (*[]entity.ContainerLevels, error) <span class="cov0" title="0">{
+        var containerLevels []entity.ContainerLevels
+        err := r.db.Where("level_id = ?", idLevels).Find(&amp;containerLevels).Error
+        return &amp;containerLevels, err
+}</span>
+
+func (r *repositoryContainerLevels) FindContainerLevelsOne(idContainerLevels int64) (*entity.ContainerLevels, error) <span class="cov0" title="0">{
+        var containerLevel entity.ContainerLevels
+        err := r.db.First(&amp;containerLevel, idContainerLevels).Error
+        return &amp;containerLevel, err
+}</span>
+
+func (r *repositoryContainerLevels) DeleteContainerLevels(idContainerLevels int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.ContainerLevels{}, idContainerLevels).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/utils"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryGuides interface {
+        InsertGuides(guides entity.Guides) (*entity.Guides, error)
+        FindGuides(filter map[string]interface{}) (*[]entity.Guides, error)
+        FindGuidesOne(idGuide int64) (*entity.Guides, error)
+        DeleteGuides(idGuides int64) error
+}
+
+func NewRepositoryGuides(db *gorm.DB) IRepositoryGuides <span class="cov1" title="1">{
+        return &amp;repositoryGuides{
+                db,
+        }
+}</span>
+
+type repositoryGuides struct {
+        db *gorm.DB
+}
+
+func (r *repositoryGuides) InsertGuides(guides entity.Guides) (*entity.Guides, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;guides).Error
+        return &amp;guides, err
+}</span>
+
+func (r *repositoryGuides) FindGuides(filter map[string]interface{}) (*[]entity.Guides, error) <span class="cov0" title="0">{
+        var guides []entity.Guides
+        command, request := utils.GetWhere(filter)
+        err := r.db.Where(command, request...).Find(&amp;guides).Error
+        return &amp;guides, err
+
+}</span>
+
+func (r *repositoryGuides) FindGuidesOne(idGuide int64) (*entity.Guides, error) <span class="cov0" title="0">{
+        var guide entity.Guides
+        var sections []entity.SectionWihoutValidate
+        err := r.db.First(&amp;guide, idGuide).Error
+        r.db.Preload("Categories").Find(&amp;sections, " guides_id =?", idGuide)
+        guide.Section = sections
+        return &amp;guide, err
+}</span>
+
+func (r *repositoryGuides) DeleteGuides(idGuides int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Guides{}, idGuides).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file29" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryLevels interface {
+        InsertLevels(levels entity.Levels) (*entity.Levels, error)
+        FindLevelsByCategory(idCategory int64) (*[]entity.Levels, error)
+        FindLevelsOne(idLevels int64) (*entity.Levels, error)
+        DeleteLevels(idLevels int64) error
+}
+
+func NewRepositoryLevels(db *gorm.DB) IRepositoryLevels <span class="cov1" title="1">{
+        return &amp;repositoryLevels{
+                db,
+        }
+}</span>
+
+type repositoryLevels struct {
+        db *gorm.DB
+}
+
+func (r *repositoryLevels) InsertLevels(levels entity.Levels) (*entity.Levels, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;levels).Error
+        return &amp;levels, err
+}</span>
+
+func (r *repositoryLevels) FindLevelsByCategory(idCategory int64) (*[]entity.Levels, error) <span class="cov0" title="0">{
+        var levels []entity.Levels
+        err := r.db.Where("category_id = ?", idCategory).Find(&amp;levels).Error
+        return &amp;levels, err
+}</span>
+
+func (r *repositoryLevels) FindLevelsOne(idLevels int64) (*entity.Levels, error) <span class="cov0" title="0">{
+        var level entity.Levels
+        err := r.db.First(&amp;level, idLevels).Error
+        return &amp;level, err
+}</span>
+
+func (r *repositoryLevels) DeleteLevels(idLevels int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Levels{}, idLevels).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file30" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryObjectives interface {
+        InsertObjective(objective entity.Objectives) (*entity.Objectives, error)
+        DeleteObjective(idObjective int64) error
+        FindObjectiveByLevel(idLevels int64) (*[]entity.Objectives, error)
+        FindObjectiveOne(idObjective int64) (*entity.Objectives, error)
+}
+
+func NewRepositoryObjectives(db *gorm.DB) IRepositoryObjectives <span class="cov1" title="1">{
+        return &amp;repositoryObjectives{
+                db,
+        }
+}</span>
+
+type repositoryObjectives struct {
+        db *gorm.DB
+}
+
+func (r *repositoryObjectives) InsertObjective(objective entity.Objectives) (*entity.Objectives, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;objective).Error
+        return &amp;objective, err
+}</span>
+
+func (r *repositoryObjectives) DeleteObjective(idObjective int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Objectives{}, idObjective).Error
+}</span>
+
+func (r *repositoryObjectives) FindObjectiveByLevel(idLevels int64) (*[]entity.Objectives, error) <span class="cov0" title="0">{
+        var objectives []entity.Objectives
+        err := r.db.Preload("Ques").Where("levels_id = ?", idLevels).Find(&amp;objectives).Error
+        return &amp;objectives, err
+}</span>
+
+func (r *repositoryObjectives) FindObjectiveOne(idObjective int64) (*entity.Objectives, error) <span class="cov0" title="0">{
+        var objective entity.Objectives
+        err := r.db.First(&amp;objective, idObjective).Error
+        return &amp;objective, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file31" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryQuestion interface {
+        InsertQuestion(question entity.Question) (*entity.Question, error)
+        DeleteQuestion(idQuestion int64) error
+        FindQuestionByObjective(idObjective int64) (*[]entity.Question, error)
+}
+
+func NewRepositoryQuestion(db *gorm.DB) IRepositoryQuestion <span class="cov1" title="1">{
+        return &amp;repositoryQuestion{
+                db,
+        }
+}</span>
+
+type repositoryQuestion struct {
+        db *gorm.DB
+}
+
+func (r *repositoryQuestion) InsertQuestion(question entity.Question) (*entity.Question, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;question).Error
+        return &amp;question, err
+}</span>
+
+func (r *repositoryQuestion) DeleteQuestion(idQuestion int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Question{}).Error
+}</span>
+
+func (r *repositoryQuestion) FindQuestionByObjective(idObjective int64) (*[]entity.Question, error) <span class="cov0" title="0">{
+        var questions []entity.Question
+        err := r.db.Where("objective_id =?", idObjective).Find(&amp;questions).Error
+        return &amp;questions, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file32" style="display: none">package repository
+
+import (
+        "service-user/internal/domain/entity"
+        "service-user/internal/domain/utils"
+
+        "gorm.io/gorm"
+)
+
+type IRepositorySection interface {
+        InsertSection(section entity.Section) (*entity.Section, error)
+        FindSection(filter map[string]interface{}) (*[]entity.Section, error)
+        FindSectionOne(idSection int64) (*entity.Section, error)
+        DeleteSection(idSection int64) error
+}
+
+func NewRepositorySection(db *gorm.DB) IRepositorySection <span class="cov1" title="1">{
+        return &amp;repositorySection{
+                db,
+        }
+}</span>
+
+type repositorySection struct {
+        db *gorm.DB
+}
+
+func (r *repositorySection) InsertSection(section entity.Section) (*entity.Section, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;section).Error
+        return &amp;section, err
+}</span>
+
+func (r *repositorySection) FindSection(filter map[string]interface{}) (*[]entity.Section, error) <span class="cov0" title="0">{
+        var sections []entity.Section
+        command, request := utils.GetWhere(filter)
+        err := r.db.Where(command, request...).Find(&amp;sections).Error
+        return &amp;sections, err
+}</span>
+
+func (r *repositorySection) FindSectionOne(idSection int64) (*entity.Section, error) <span class="cov0" title="0">{
+        var section entity.Section
+        err := r.db.First(&amp;section, idSection).Error
+        return &amp;section, err
+}</span>
+
+func (r *repositorySection) DeleteSection(idSection int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Section{}, idSection).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file33" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+        "service-user/internal/infra/storage"
+        "service-user/internal/utils"
+)
+
+type ActivitiesUseCase struct {
+        repoActivities repository.IRepositoryActivities
+        file           storage.IGCImageRepo
+}
+
+func NewActivitiesUseCase(repoActivities repository.IRepositoryActivities, file storage.IGCImageRepo) ActivitiesUseCase <span class="cov0" title="0">{
+        return ActivitiesUseCase{
+                repoActivities,
+                file,
+        }
+}</span>
+
+func (r *ActivitiesUseCase) RegisterActivities(ctx context.Context, activities *entity.Activities) (interface{}, int) <span class="cov0" title="0">{
+        pathname, err := r.file.SetFile(ctx, activities.Image, "activities/act-%s.png")
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest,
+                        "error",
+                        "hubo un problema con storage",
+                        nil,
+                ), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">activities.Image = pathname
+        newActivities, err := r.repoActivities.RegisterActivities(*activities)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la actividad", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "actividad insertada exitosamente", newActivities), http.StatusOK</span>
+}
+
+func (r *ActivitiesUseCase) FindActivities(idSites int64) (interface{}, int) <span class="cov0" title="0">{
+        activties, err := r.repoActivities.FindActivities(idSites)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", activties), http.StatusOK</span>
+}
+
+func (r *ActivitiesUseCase) FindActivitiesOne(idActivities int64) (interface{}, int) <span class="cov0" title="0">{
+        activity, err := r.repoActivities.FindActivitiesOne(idActivities)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", activity), http.StatusOK</span>
+}
+
+func (r *ActivitiesUseCase) DeleteActivities(ctx context.Context, idActivities int64) (interface{}, int) <span class="cov0" title="0">{
+        activity, err := r.repoActivities.FindActivitiesOne(idActivities)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(activity.Image)
+        err = r.file.DeleteFile(ctx, "container-level/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contenido del nivel", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">err = r.repoActivities.DeleteActivities(idActivities)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la actividad", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "actividad eliminado sastifactoriamente", nil), http.StatusBadRequest</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file34" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+        "service-user/internal/infra/storage"
+        "service-user/internal/utils"
+)
+
+type CategoriesUseCase struct {
+        repoCategories repository.IRepositoryCategories
+        file           storage.IGCImageRepo
+}
+
+func NewCateogriesUseCase(repoCategories repository.IRepositoryCategories, file storage.IGCImageRepo) CategoriesUseCase <span class="cov0" title="0">{
+        return CategoriesUseCase{
+                repoCategories,
+                file,
+        }
+}</span>
+
+func (c *CategoriesUseCase) RegisterCategory(ctx context.Context, category *entity.Categories) (interface{}, int) <span class="cov0" title="0">{
+        pathname, err := c.file.SetFile(ctx, category.Cover, "category-guides/cat-%s.png")
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">category.Cover = pathname
+        newCategories, err := c.repoCategories.InsertCategory(*category)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la categoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "categoria insertada exitosamente", newCategories), http.StatusOK</span>
+}
+
+func (c *CategoriesUseCase) FindCategory(idSections int64) (interface{}, int) <span class="cov0" title="0">{
+        categories, err := c.repoCategories.FindCategory(idSections)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", categories), http.StatusOK</span>
+}
+
+func (c *CategoriesUseCase) FindCategoryOne(idCategory int64) (interface{}, int) <span class="cov0" title="0">{
+        category, err := c.repoCategories.FindCategoryOne(idCategory)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", category), http.StatusOK</span>
+}
+
+func (c *CategoriesUseCase) DeleteCategory(ctx context.Context, idCategory int64) (interface{}, int) <span class="cov0" title="0">{
+        category, err := c.repoCategories.FindCategoryOne(idCategory)
+        if err != nil || category == nil || category.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "no se encontro la categoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(category.Cover)
+        err = c.file.DeleteFile(ctx, "category-guides/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la guias", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">err = c.repoCategories.DeleteCategory(idCategory)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la categoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "categoria eliminada exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file35" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+        "service-user/internal/infra/storage"
+        "service-user/internal/utils"
+)
+
+type ContainerLevelsUseCase struct {
+        repoContainerLevels repository.IRepositoryContainerLevels
+        file                storage.IGCImageRepo
+}
+
+func NewContainerLevelsUseCase(repoContainerLevels repository.IRepositoryContainerLevels, file storage.IGCImageRepo) ContainerLevelsUseCase <span class="cov0" title="0">{
+        return ContainerLevelsUseCase{
+                repoContainerLevels,
+                file,
+        }
+}</span>
+
+func (c *ContainerLevelsUseCase) InsertContainerLevels(ctx context.Context, container *entity.ContainerLevels) (interface{}, int) <span class="cov0" title="0">{
+        if container.Type == "IMAGE" </span><span class="cov0" title="0">{
+                pathname, err := c.file.SetFile(ctx, container.Container, "container-level/container-%s.png")
+                if err != nil </span><span class="cov0" title="0">{
+                        return objectValues.NewResponseWithData(http.StatusBadRequest,
+                                "error",
+                                "hubo un problema con storage",
+                                nil,
+                        ), http.StatusBadRequest
+                }</span>
+                <span class="cov0" title="0">container.Container = pathname</span>
+        }
+
+        <span class="cov0" title="0">container, err := c.repoContainerLevels.InsertContainerLevels(*container)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la seccion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "guia insertada exitosamente", container), http.StatusOK</span>
+}
+
+func (c *ContainerLevelsUseCase) FindContainerLevels(idLevels int64) (interface{}, int) <span class="cov0" title="0">{
+        container, err := c.repoContainerLevels.FindContainerLevels(idLevels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", container), http.StatusOK</span>
+}
+
+func (c *ContainerLevelsUseCase) FindContainerLevelsOne(idContainerLevels int64) (interface{}, int) <span class="cov0" title="0">{
+        container, err := c.repoContainerLevels.FindContainerLevelsOne(idContainerLevels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", container), http.StatusOK</span>
+
+}
+
+func (c *ContainerLevelsUseCase) DeleteContainerLevels(ctx context.Context, idContainerLevels int64) (interface{}, int) <span class="cov0" title="0">{
+        container, err := c.repoContainerLevels.FindContainerLevelsOne(idContainerLevels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">if container.Type == "IMAGE" </span><span class="cov0" title="0">{
+                objectName := utils.ExtractObjectName(container.Container)
+                err = c.file.DeleteFile(ctx, "container-level/%s", objectName)
+                if err != nil </span><span class="cov0" title="0">{
+                        return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contenido del nivel", nil), http.StatusBadRequest
+                }</span>
+        }
+        <span class="cov0" title="0">err = c.repoContainerLevels.DeleteContainerLevels(idContainerLevels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contenido del nivel", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "contenido del nivel eliminado sastifactoriamente", nil), http.StatusBadRequest</span>
+}
+</pre>
+		
+		<pre class="file" id="file36" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+        "service-user/internal/infra/storage"
+        "service-user/internal/utils"
+)
+
+type GuidesUseCase struct {
+        repoGuides repository.IRepositoryGuides
+        file       storage.IGCImageRepo
+}
+
+func NewGuidesUseCase(repoGuides repository.IRepositoryGuides, file storage.IGCImageRepo) GuidesUseCase <span class="cov0" title="0">{
+        return GuidesUseCase{
+                repoGuides,
+                file,
+        }
+}</span>
+
+func (c *GuidesUseCase) RegisterGuides(ctx context.Context, guide *entity.Guides) (interface{}, int) <span class="cov0" title="0">{
+        pathname, err := c.file.SetFile(ctx, guide.Cover, "guides/guides-%s.png")
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">guide.Cover = pathname
+        newGuide, err := c.repoGuides.InsertGuides(*guide)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la seccion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "guia insertada exitosamente", newGuide), http.StatusOK</span>
+}
+
+func (c *GuidesUseCase) FindGuides(filter map[string]interface{}) (interface{}, int) <span class="cov0" title="0">{
+        guides, err := c.repoGuides.FindGuides(filter)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", guides), http.StatusOK</span>
+}
+
+func (c *GuidesUseCase) FindGuidesOne(idGuides int64) (interface{}, int) <span class="cov0" title="0">{
+        guide, err := c.repoGuides.FindGuidesOne(idGuides)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", guide), http.StatusOK</span>
+}
+
+func (c *GuidesUseCase) DeleteGuides(ctx context.Context, idGuides int64) (interface{}, int) <span class="cov0" title="0">{
+        guide, err := c.repoGuides.FindGuidesOne(idGuides)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(guide.Cover)
+        err = c.file.DeleteFile(ctx, "guides/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la guias", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">err = c.repoGuides.DeleteGuides(idGuides)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la guia", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "guia eliminada exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file37" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+        "service-user/internal/infra/storage"
+        "service-user/internal/utils"
+)
+
+type LevelsUseCase struct {
+        repoLevels repository.IRepositoryLevels
+        file       storage.IGCImageRepo
+}
+
+func NewLevelsUseCase(repoLevels repository.IRepositoryLevels, file storage.IGCImageRepo) LevelsUseCase <span class="cov0" title="0">{
+        return LevelsUseCase{
+                repoLevels,
+                file,
+        }
+}</span>
+
+func (c *LevelsUseCase) InsertLevels(ctx context.Context, levels entity.Levels) (interface{}, int) <span class="cov0" title="0">{
+        pathname, err := c.file.SetFile(ctx, levels.Cover, "levels-guides/levels-%s.png")
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">levels.Cover = pathname
+        newLevel, err := c.repoLevels.InsertLevels(levels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar new level", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "level insertado exitosamente", newLevel), http.StatusOK</span>
+
+}
+
+func (c *LevelsUseCase) FindLevelsByCategory(idCategory int64) (interface{}, int) <span class="cov0" title="0">{
+        levels, err := c.repoLevels.FindLevelsByCategory(idCategory)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", levels), http.StatusOK</span>
+
+}
+
+func (c *LevelsUseCase) FindLevelsOne(idLevels int64) (interface{}, int) <span class="cov0" title="0">{
+        level, err := c.repoLevels.FindLevelsOne(idLevels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", level), http.StatusOK</span>
+
+}
+
+func (c *LevelsUseCase) DeleteLevels(ctx context.Context, idLevels int64) (interface{}, int) <span class="cov0" title="0">{
+        level, err := c.repoLevels.FindLevelsOne(idLevels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(level.Cover)
+        err = c.file.DeleteFile(ctx, "levels-guides/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la guias", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">err = c.repoLevels.DeleteLevels(idLevels)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contenido del nivel", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "nivel eliminado sastifactoriamente", nil), http.StatusBadRequest</span>
+}
+</pre>
+		
+		<pre class="file" id="file38" style="display: none">package usecase
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+)
+
+type ObjectivesUseCase struct {
+        repoObjectives repository.IRepositoryObjectives
+}
+
+func NewObjectivesUseCase(repoObjectives repository.IRepositoryObjectives) ObjectivesUseCase <span class="cov0" title="0">{
+        return ObjectivesUseCase{
+                repoObjectives,
+        }
+}</span>
+
+func (c *ObjectivesUseCase) RegisterObjective(objetives *entity.Objectives) (interface{}, int) <span class="cov0" title="0">{
+        newObjective, err := c.repoObjectives.InsertObjective(*objetives)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar new objectives", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "objectivo insertado exitosamente", newObjective), http.StatusOK</span>
+
+}
+
+func (c *ObjectivesUseCase) DeleteObjective(idObjective int64) (interface{}, int) <span class="cov0" title="0">{
+        err := c.repoObjectives.DeleteObjective(idObjective)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el objectivo", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "objectivo eliminado exitosamente", nil), http.StatusOK</span>
+
+}
+
+func (c *ObjectivesUseCase) FindObjectiveByLevels(idLevel int64) (interface{}, int) <span class="cov0" title="0">{
+        objectives, err := c.repoObjectives.FindObjectiveByLevel(idLevel)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", objectives), http.StatusOK</span>
+}
+
+func (c *ObjectivesUseCase) FindObjectiveOne(idObective int64) (interface{}, int) <span class="cov0" title="0">{
+        objective, err := c.repoObjectives.FindObjectiveOne(idObective)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", objective), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file39" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+        "service-user/internal/infra/storage"
+        "service-user/internal/utils"
+)
+
+type QuestionUseCase struct {
+        repoQuestion repository.IRepositoryQuestion
+        file         storage.IGCImageRepo
+}
+
+func NewQuestionUseCase(repoQuestion repository.IRepositoryQuestion, file storage.IGCImageRepo) QuestionUseCase <span class="cov0" title="0">{
+        return QuestionUseCase{
+                repoQuestion,
+                file,
+        }
+}</span>
+
+func (c *QuestionUseCase) InsertQuestion(ctx context.Context, question entity.Question) (interface{}, int) <span class="cov0" title="0">{
+        if question.Type == "IMAGE" </span><span class="cov0" title="0">{
+                pathname, err := c.file.SetFile(ctx, question.Request, "question/question-%s.png")
+                if err != nil </span><span class="cov0" title="0">{
+                        return objectValues.NewResponseWithData(http.StatusBadRequest,
+                                "error",
+                                "hubo un problema con storage",
+                                nil,
+                        ), http.StatusBadRequest
+                }</span>
+                <span class="cov0" title="0">question.Request = pathname</span>
+        }
+        <span class="cov0" title="0">newQuestion, err := c.repoQuestion.InsertQuestion(question)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar new question", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "question insertado exitosamente", newQuestion), http.StatusOK</span>
+
+}
+
+func (c *QuestionUseCase) DeleteQuestion(ctx context.Context, idQuestion int64) (interface{}, int) <span class="cov0" title="0">{
+        questions, err := c.repoQuestion.FindQuestionByObjective(idQuestion)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+
+        <span class="cov0" title="0">for _, question := range *questions </span><span class="cov0" title="0">{
+                if question.Type == "IMAGE" </span><span class="cov0" title="0">{
+                        objectName := utils.ExtractObjectName(question.Request)
+                        err = c.file.DeleteFile(ctx, "question/%s", objectName)
+                        if err != nil </span><span class="cov0" title="0">{
+                                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contenido del nivel", nil), http.StatusBadRequest
+                        }</span>
+                }
+        }
+
+        <span class="cov0" title="0">err = c.repoQuestion.DeleteQuestion(idQuestion)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar new question", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "question eliminada exitosamente", nil), http.StatusOK</span>
+}
+
+func (c *QuestionUseCase) FindQuestionByObjective(idObjective int64) (interface{}, int) <span class="cov0" title="0">{
+        question, err := c.repoQuestion.FindQuestionByObjective(idObjective)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", question), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file40" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-user/internal/domain/entity"
+        objectValues "service-user/internal/domain/object_values"
+        "service-user/internal/domain/repository"
+        "service-user/internal/infra/storage"
+        "service-user/internal/utils"
+)
+
+type SectionUseCase struct {
+        repoSection repository.IRepositorySection
+        file        storage.IGCImageRepo
+}
+
+func NewSectionUseCase(repoSection repository.IRepositorySection, file storage.IGCImageRepo) SectionUseCase <span class="cov0" title="0">{
+        return SectionUseCase{
+                repoSection,
+                file,
+        }
+}</span>
+
+func (c *SectionUseCase) InsertSection(ctx context.Context, section *entity.Section) (interface{}, int) <span class="cov0" title="0">{
+        pathname, err := c.file.SetFile(ctx, section.Cover, "section/section-%s.png")
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">section.Cover = pathname
+        newSection, err := c.repoSection.InsertSection(*section)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la seccion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "seccion insertada exitosamente", newSection), http.StatusOK</span>
+}
+
+func (c *SectionUseCase) FindSection(filter map[string]interface{}) (interface{}, int) <span class="cov0" title="0">{
+        sections, err := c.repoSection.FindSection(filter)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", sections), http.StatusOK</span>
+}
+
+func (c *SectionUseCase) FindSectionOne(idSection int64) (interface{}, int) <span class="cov0" title="0">{
+        section, err := c.repoSection.FindSectionOne(idSection)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", section), http.StatusOK</span>
+}
+
+func (c *SectionUseCase) DeleteSection(ctx context.Context, idSection int64) (interface{}, int) <span class="cov0" title="0">{
+        section, err := c.repoSection.FindSectionOne(idSection)
+        if err != nil || section == nil || section.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(section.Cover)
+        err = c.file.DeleteFile(ctx, "section/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">err = c.repoSection.DeleteSection(idSection)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la seccion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "seccion eliminada exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file41" style="display: none">package utils
+
+func GetWhere(data map[string]interface{}) (string, []interface{}) <span class="cov0" title="0">{
+        var i = 0
+        var command = ""
+        var request []interface{}
+        for index, value := range data </span><span class="cov0" title="0">{
+                command += index + " = ? "
+                if i == 0 </span><span class="cov0" title="0">{
+                        command += " and "
+                }</span>
+                <span class="cov0" title="0">request = append(request, value)</span>
+        }
+        <span class="cov0" title="0">return command, request</span>
+}
+</pre>
+		
+		<pre class="file" id="file42" style="display: none">package utils
+
+import "net/url"
+
+func UrlValuesToMap(values url.Values) map[string]interface{} <span class="cov0" title="0">{
+        m := make(map[string]interface{})
+        for k, v := range values </span><span class="cov0" title="0">{
+                m[k] = v[0]
+        }</span>
+        <span class="cov0" title="0">return m</span>
+}
+</pre>
+		
+		<pre class="file" id="file43" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateActivities(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                activities := new(entity.Activities)
+
+                _ = c.Bind(&amp;activities)
+                if err := v.Struct(activities); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("activities", activities)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file44" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateCategories(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                categories := new(entity.Categories)
+
+                _ = c.Bind(&amp;categories)
+                if err := v.Struct(categories); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("categories", categories)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file45" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateContainerLevels(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                containerLevels := new(entity.ContainerLevels)
+
+                _ = c.Bind(&amp;containerLevels)
+                if err := v.Struct(containerLevels); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("containerLevels", containerLevels)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file46" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateGuides(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                guides := new(entity.Guides)
+
+                _ = c.Bind(&amp;guides)
+                if err := v.Struct(guides); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("guides", guides)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file47" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateLevels(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                levels := new(entity.Levels)
+
+                _ = c.Bind(&amp;levels)
+                if err := v.Struct(levels); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("levels", levels)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file48" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateObjectives(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                objectives := new(entity.Objectives)
+
+                _ = c.Bind(&amp;objectives)
+                if err := v.Struct(objectives); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("objectives", objectives)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file49" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateQuestion(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                question := new(entity.Question)
+
+                _ = c.Bind(&amp;question)
+                if err := v.Struct(question); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("question", question)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file50" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-user/internal/domain/entity"
+        validatorPer "service-user/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateSections(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                section := new(entity.Section)
+
+                _ = c.Bind(&amp;section)
+                if err := v.Struct(section); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("section", section)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file51" style="display: none">package storage
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "io"
+        "log"
+        "service-user/internal/utils"
+
+        "cloud.google.com/go/storage"
+)
+
+type gcImageRepository struct {
+        Storage    *storage.Client
+        BucketName string
+}
+
+type IGCImageRepo interface {
+        SetFile(ctx context.Context, field, routeSprintf string) (string, error)
+        DeleteFile(ctx context.Context, routeSprintf, name string) error
+}
+
+func InitStorage(gcClient *storage.Client, bucketName string) IGCImageRepo <span class="cov0" title="0">{
+        return &amp;gcImageRepository{
+                Storage:    gcClient,
+                BucketName: bucketName,
+        }
+}</span>
+
+func (r *gcImageRepository) SetFile(ctx context.Context, field, routeSprintf string) (string, error) <span class="cov0" title="0">{
+        buf, err := utils.DecodeFile(field)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", errors.New("no es posible decodificar el archivo especificado")
+        }</span>
+        <span class="cov0" title="0">randomName := fmt.Sprintf(routeSprintf, utils.RandomNameObjectUUID())
+
+        bckt := r.Storage.Bucket(r.BucketName)
+        object := bckt.Object(randomName)
+        wc := object.NewWriter(ctx)
+        wc.ObjectAttrs.CacheControl = "Cache-Control:no-cache, max-age=0"
+
+        if _, err := io.Copy(wc, buf); err != nil </span><span class="cov0" title="0">{
+                log.Printf("no se puede escribir el archivo en Google Cloud Storage: %v\n", err)
+                return "", errors.New("no se puede escribir el archivo en Google Cloud Storage")
+        }</span>
+
+        <span class="cov0" title="0">if err := wc.Close(); err != nil </span><span class="cov0" title="0">{
+                fmt.Println(err)
+                return "", errors.New("problemas de acceso al sistema de almacenamiento")
+        }</span>
+
+        <span class="cov0" title="0">imageURL := fmt.Sprintf(
+                "https://storage.googleapis.com/%s/%s",
+                r.BucketName,
+                randomName,
+        )
+
+        return imageURL, nil</span>
+}
+
+func (r *gcImageRepository) DeleteFile(ctx context.Context, routeSprintf, name string) error <span class="cov0" title="0">{
+        bckt := r.Storage.Bucket(r.BucketName)
+        objectName := fmt.Sprintf(routeSprintf, name)
+        object := bckt.Object(objectName)
+
+        if err := object.Delete(ctx); err != nil </span><span class="cov0" title="0">{
+                return errors.New("no fue posible eliminar el archivo con el ID especificado")
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file52" style="display: none">package validator
+
+import (
+        "log"
+        "strings"
+        "sync"
+
+        "github.com/go-playground/locales/es"
+        ut "github.com/go-playground/universal-translator"
+        "github.com/go-playground/validator/v10"
+        es_translation "github.com/go-playground/validator/v10/translations/es"
+)
+
+var once sync.Once
+
+var validate *validator.Validate
+var trans ut.Translator
+
+func NewValidator() *validator.Validate <span class="cov6" title="8">{
+        once.Do(func() </span><span class="cov1" title="1">{
+                validate = validator.New()
+                es := es.New()
+                uni := ut.New(es, es)
+
+                trans, found := uni.GetTranslator("es")
+                if !found </span><span class="cov0" title="0">{
+                        log.Fatal("Traductor no encontrado")
+                }</span>
+                <span class="cov1" title="1">if err := es_translation.RegisterDefaultTranslations(validate, trans); err != nil </span><span class="cov0" title="0">{
+                        log.Fatal(err)
+                }</span>
+        })
+        <span class="cov6" title="8">return validate</span>
+}
+
+type Error struct {
+        Key     string
+        Message string
+}
+
+func GenerateMessage(v *validator.Validate, errs validator.ValidationErrors) []Error <span class="cov6" title="8">{
+
+        var errors []Error
+
+        for _, e := range errs </span><span class="cov10" title="41">{
+                error := Error{
+                        Key:     strings.Split(e.Translate(trans), " ")[1],
+                        Message: e.Translate((trans)),
+                }
+                errors = append(errors, error)
+        }</span>
+
+        <span class="cov6" title="8">return errors</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file53" style="display: none">package utils
+
+import (
+        "bytes"
+        "encoding/base64"
+        "errors"
+)
+
+func DecodeFile(strBase64 string) (*bytes.Buffer, error) <span class="cov0" title="0">{
+        data, err := base64.StdEncoding.DecodeString(strBase64)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, errors.New("no es posible decodificar el archivo debido a errores existentes")
+        }</span>
+
+        <span class="cov0" title="0">buf := bytes.NewBuffer(data)
+        return buf, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file54" style="display: none">package utils
+
+import (
+        "github.com/google/uuid"
+)
+
+func RandomNameObjectUUID() string <span class="cov0" title="0">{
+        objID, _ := uuid.NewRandom()
+        return objID.String()
+}</span>
+</pre>
+		
+		<pre class="file" id="file55" style="display: none">package utils
+
+import (
+        "net/url"
+        "path"
+        "strings"
+)
+
+func IsURL(content string) bool <span class="cov0" title="0">{
+        _, err := url.ParseRequestURI(content)
+        return err == nil &amp;&amp; strings.HasPrefix(content, "https://")
+}</span>
+
+func ExtractObjectName(fileURL string) string <span class="cov0" title="0">{
+        urlPath, _ := url.ParseRequestURI(fileURL)
+        return path.Base(urlPath.Path)
+}</span>
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

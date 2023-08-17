@@ -12,7 +12,7 @@ func NewHandlerCategories(e *echo.Echo, categoriesUseCase usecase.CategoriesUseC
 	categoriesEntry := entry.NewCategoryEntry(categoriesUseCase)
 	e.POST("/categories", categoriesEntry.RegisterCategory, auth, validator.ValidateCategories)
 	e.DELETE("/categories/:ID", categoriesEntry.DeleteCategory, auth)
-	e.GET("/categories", categoriesEntry.FindCategory, auth)
+	e.GET("/categories/section/:ID", categoriesEntry.FindCategory, auth)
 	e.GET("/categories/:ID", categoriesEntry.FindCategoryOne, auth)
 	return e
 }
