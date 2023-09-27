@@ -10,3 +10,4 @@
 
 
 ## Configuracion
+todas las configuraciones dentro del proyecto estan en `./data/config.yml`
