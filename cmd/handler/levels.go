@@ -10,9 +10,9 @@ import (
 
 func NewHandlerLevel(e *echo.Echo, levelUseCase usecase.LevelsUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	levelEntry := entry.NewLevelEntry(levelUseCase)
-	e.POST("/level", levelEntry.RegisterLevels, auth, validator.ValidateLevels)
-	e.DELETE("/level/:ID", levelEntry.DeleteLevels, auth)
-	e.GET("/level/category/:ID", levelEntry.FindLevelsByCategory, auth)
-	e.GET("/level/:ID", levelEntry.FindLevelsOne, auth)
+	e.POST("/guides/level", levelEntry.RegisterLevels, auth, validator.ValidateLevels)
+	e.DELETE("/guides/level/:ID", levelEntry.DeleteLevels, auth)
+	e.GET("/guides/level/category/:ID", levelEntry.FindLevelsByCategory, auth)
+	e.GET("/guides/level/:ID", levelEntry.FindLevelsOne, auth)
 	return e
 }

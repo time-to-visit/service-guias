@@ -10,9 +10,9 @@ import (
 
 func NewHandlerObjetive(e *echo.Echo, objectiveUseCase usecase.ObjectivesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	objectiveEntry := entry.NewOjectiveEntry(objectiveUseCase)
-	e.POST("/objectives", objectiveEntry.RegisterObjective, auth, validator.ValidateObjectives)
-	e.DELETE("/objectives/:ID", objectiveEntry.DeleteObjective, auth)
-	e.GET("/objectives/level/:ID", objectiveEntry.FindObjectiveByLevels, auth)
-	e.GET("/objectives/:ID", objectiveEntry.FindObjectiveOne, auth)
+	e.POST("/guides/objectives", objectiveEntry.RegisterObjective, auth, validator.ValidateObjectives)
+	e.DELETE("/guides/objectives/:ID", objectiveEntry.DeleteObjective, auth)
+	e.GET("/guides/objectives/level/:ID", objectiveEntry.FindObjectiveByLevels, auth)
+	e.GET("/guides/objectives/:ID", objectiveEntry.FindObjectiveOne, auth)
 	return e
 }

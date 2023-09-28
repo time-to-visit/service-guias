@@ -10,9 +10,9 @@ import (
 
 func NewHandlerGuide(e *echo.Echo, guideUseCase usecase.GuidesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	guideEntry := entry.NewGuideEntry(guideUseCase)
-	e.DELETE("/guides/:ID", guideEntry.DeleteGuides, auth)
-	e.POST("/guides", guideEntry.RegisterGuides, auth, validator.ValidateGuides)
-	e.GET("/guides", guideEntry.FindGuides, auth)
-	e.GET("/guides/:ID", guideEntry.FindGuidesOne, auth)
+	e.DELETE("/guides/guides/:ID", guideEntry.DeleteGuides, auth)
+	e.POST("/guides/guides", guideEntry.RegisterGuides, auth, validator.ValidateGuides)
+	e.GET("/guides/guides", guideEntry.FindGuides, auth)
+	e.GET("/guides/guides/:ID", guideEntry.FindGuidesOne, auth)
 	return e
 }

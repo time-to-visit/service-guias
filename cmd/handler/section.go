@@ -10,9 +10,9 @@ import (
 
 func NewHandlerSection(e *echo.Echo, sectionUseCase usecase.SectionUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	sectionEntry := entry.NewSectionEntry(sectionUseCase)
-	e.POST("/section", sectionEntry.InsertSection, auth, validator.ValidateSections)
-	e.DELETE("/section/:ID", sectionEntry.DeleteSection, auth)
-	e.GET("/section", sectionEntry.FindSection, auth)
-	e.GET("/section/:ID", sectionEntry.FindSectionOne, auth)
+	e.POST("/guides/section", sectionEntry.InsertSection, auth, validator.ValidateSections)
+	e.DELETE("/guides/section/:ID", sectionEntry.DeleteSection, auth)
+	e.GET("/guides/section", sectionEntry.FindSection, auth)
+	e.GET("/guides/section/:ID", sectionEntry.FindSectionOne, auth)
 	return e
 }

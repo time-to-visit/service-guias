@@ -10,10 +10,10 @@ import (
 
 func NewHandlerContainerLevel(e *echo.Echo, containerLevelUseCase usecase.ContainerLevelsUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	containerLevelEntry := entry.NewContainerLevelEntry(containerLevelUseCase)
-	e.POST("/container-level", containerLevelEntry.InsertContainerLevels, auth, validator.ValidateContainerLevels)
-	e.DELETE("/container-level/:ID", containerLevelEntry.DeleteContainerLevels, auth)
-	e.GET("/container-level/:ID", containerLevelEntry.FindContainerLevelsOne, auth)
-	e.GET("/container-level/level/:ID", containerLevelEntry.FindContainerLevels, auth)
+	e.POST("/guides/container-level", containerLevelEntry.InsertContainerLevels, auth, validator.ValidateContainerLevels)
+	e.DELETE("/guides/container-level/:ID", containerLevelEntry.DeleteContainerLevels, auth)
+	e.GET("/guides/container-level/:ID", containerLevelEntry.FindContainerLevelsOne, auth)
+	e.GET("/guides/container-level/level/:ID", containerLevelEntry.FindContainerLevels, auth)
 
 	return e
 }
