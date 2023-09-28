@@ -29,7 +29,7 @@ type GuidesWihoutValidate struct {
 	MunicipalitiesName string `gorm:"column:municipalities_name;type:varchar(255);not null" json:"municipalities_name"`
 	DepartmentID       int64  `gorm:"column:department_id;type:int(11);not null" json:"department_id"`
 	DepartmentName     string `gorm:"column:deparment_name;type:varchar(255);not null" json:"department_name"`
-	Description        string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+	Description        string `gorm:"column:description;type:varchar(255);not null" json:"description" `
 }
 
 func (m *GuidesWihoutValidate) TableName() string {

@@ -9,8 +9,8 @@ import (
 type Activities struct {
 	Model
 	Image            string               `gorm:"column:image;type:varchar(255);not null" json:"image" validate:"required"`
-	Video            string               `gorm:"column:video;type:varchar(255);not null" json:"video" validate:"required"`
-	Description      string               `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+	Video            string               `gorm:"column:video;type:varchar(255);not null" json:"video" `
+	Description      string               `gorm:"column:description;type:text;size:65535;not null" json:"description" validate:"required"`
 	SitesId          int64                `gorm:"column:department_id;type:int(11);not null" json:"site_id"`
 	SitesName        string               `gorm:"column:sites_name;type:varchar(255);not null" json:"sites_name" validate:"required"`
 	MunicipalitiesID int64                `gorm:"column:department_id;type:int(11);not null" json:"municipalities_id"`
@@ -23,8 +23,8 @@ type Activities struct {
 type ActivitiesWihoutValidate struct {
 	Model
 	Image            string `gorm:"column:image;type:varchar(255);not null" json:"image" validate:"required"`
-	Video            string `gorm:"column:video;type:varchar(255);not null" json:"video" validate:"required"`
-	Description      string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+	Video            string `gorm:"column:video;type:varchar(255);not null" json:"video"`
+	Description      string `gorm:"column:description;type:text;size:65535;not null" json:"description" validate:"required"`
 	SitesId          int64  `gorm:"column:department_id;type:int(11);not null" json:"site_id"`
 	SitesName        string `gorm:"column:sites_name;type:varchar(255);not null" json:"sites_name" validate:"required"`
 	MunicipalitiesID int64  `gorm:"column:department_id;type:int(11);not null" json:"municipalities_id"`
